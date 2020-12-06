@@ -6,6 +6,7 @@
 #include <boost/iostreams/filtering_stream.hpp>
 #include <boost/iostreams/copy.hpp>
 #include <boost/iostreams/filter/zlib.hpp>
+#include <boost/filesystem/operations.hpp>
 
 
 using namespace std;
@@ -18,7 +19,7 @@ public:
     ~IDecompress(){};
 
     //解压缩接口
-    virtual int decompress(string& filenema) = 0;
+    virtual int decompress(string& filename) = 0;
 
 private:
     IDecompress(const IDecompress& other);

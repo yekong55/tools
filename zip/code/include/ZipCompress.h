@@ -15,6 +15,7 @@ public:
 
     //压缩接口
     virtual int compress(string& srcFilename, string& dstFilename);
+    const int HEADERSIZE = 4;
 
 private:
 
